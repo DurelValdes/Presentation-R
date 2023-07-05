@@ -1,0 +1,11 @@
+﻿EXPLICATION DES DIFFÉRENTS DOSSIERS
+
+
+* L’essentiel sur Quarto: ce dossier contient des fichiers de même nom dont l’objectif est de présenter de manière brève les éléments clés à connaître pour produire un bon document Quarto. 
+* Livre Q: celui-ci contient les fichiers ayant servi à la création du livre
+* Présentation RevealJs: Il contient les fichiers  ayant servi à la présentation interactive avec Quarto en utilisant RevealJs. 
+* Usage de Template: Ici sont mis les fichiers utilisés pour la création d’un document Quarto en utilisant les styles d’un document de référence. Le document de référence en question est LABOU VF.
+
+
+
+Vu la taille des fichiers Livre Q et Présentation RevealJs, nous avons jugé interessant de vous le mettre sous format .zip
