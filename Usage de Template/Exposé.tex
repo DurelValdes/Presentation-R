@@ -1,0 +1,813 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\PassOptionsToPackage{dvipsnames,svgnames,x11names}{xcolor}
+%
+\documentclass[
+  letterpaper,
+  DIV=11,
+  numbers=noendperiod]{scrartcl}
+
+\usepackage{amsmath,amssymb}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else  
+    % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\usepackage{soul}
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+% Make \paragraph and \subparagraph free-standing
+\ifx\paragraph\undefined\else
+  \let\oldparagraph\paragraph
+  \renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+  \let\oldsubparagraph\subparagraph
+  \renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
+
+
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+
+\KOMAoption{captions}{tableheading}
+\makeatletter
+\makeatother
+\makeatletter
+\makeatother
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\AtBeginDocument{%
+\ifdefined\contentsname
+  \renewcommand*\contentsname{Table of contents}
+\else
+  \newcommand\contentsname{Table of contents}
+\fi
+\ifdefined\listfigurename
+  \renewcommand*\listfigurename{List of Figures}
+\else
+  \newcommand\listfigurename{List of Figures}
+\fi
+\ifdefined\listtablename
+  \renewcommand*\listtablename{List of Tables}
+\else
+  \newcommand\listtablename{List of Tables}
+\fi
+\ifdefined\figurename
+  \renewcommand*\figurename{Figure}
+\else
+  \newcommand\figurename{Figure}
+\fi
+\ifdefined\tablename
+  \renewcommand*\tablename{Table}
+\else
+  \newcommand\tablename{Table}
+\fi
+}
+\@ifpackageloaded{float}{}{\usepackage{float}}
+\floatstyle{ruled}
+\@ifundefined{c@chapter}{\newfloat{codelisting}{h}{lop}}{\newfloat{codelisting}{h}{lop}[chapter]}
+\floatname{codelisting}{Listing}
+\newcommand*\listoflistings{\listof{codelisting}{List of Listings}}
+\makeatother
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\@ifpackageloaded{subcaption}{}{\usepackage{subcaption}}
+\makeatother
+\makeatletter
+\@ifpackageloaded{tcolorbox}{}{\usepackage[skins,breakable]{tcolorbox}}
+\makeatother
+\makeatletter
+\@ifundefined{shadecolor}{\definecolor{shadecolor}{rgb}{.97, .97, .97}}
+\makeatother
+\makeatletter
+\makeatother
+\makeatletter
+\makeatother
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same} % disable monospaced font for URLs
+\hypersetup{
+  pdftitle={EXPOSE QUARTO},
+  colorlinks=true,
+  linkcolor={blue},
+  filecolor={Maroon},
+  citecolor={Blue},
+  urlcolor={Blue},
+  pdfcreator={LaTeX via pandoc}}
+
+\title{EXPOSE QUARTO}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[interior hidden, borderline west={3pt}{0pt}{shadecolor}, enhanced, frame hidden, sharp corners, breakable, boxrule=0pt]}{\end{tcolorbox}}\fi
+
+\renewcommand*\contentsname{Table of contents}
+{
+\hypersetup{linkcolor=}
+\setcounter{tocdepth}{6}
+\tableofcontents
+}
+\newpage{}
+
+\hypertarget{resume}{%
+\section{RESUME}\label{resume}}
+
+La migration est un fléau qui touche particulièrement les jeunes ces
+dernières années et le plus souvent à la recherche de
+l\textquotesingle emploi. Ce problème ne peut être résolu
+qu\textquotesingle en s\textquotesingle attaquant à ces causes et en
+identifiant les caractéristiques des migrants à la recherche de
+l\textquotesingle emploi. Ainsi, l\textquotesingle objectif de cette
+présente étude consistait à appréhender les déterminants de cette
+migration pour les jeunes sénégalais en passant par une observation de
+leur répartition à travers certaines variables. Autrement dit, il
+s\textquotesingle agissait d\textquotesingle identifier les jeunes
+sénégalais qui ont un risque plus élevé de migrer pour de
+l\textquotesingle emploi. Pour ce faire, les données de cette étude ont
+été tirées de la phase pilote du 5e Recensement Général de
+l\textquotesingle Habitat et de la Population au Sénégal (RGPH-5). A cet
+effet, la démarche adoptée a consisté, en sus de la revue de littérature
+et des présentations du cadre conceptuel et des données, dans un premier
+temps à faire une analyse descriptive (univariée, bivariée).
+L\textquotesingle objectif recherché dans cette partie est de comprendre
+les caractéristiques de notre population d\textquotesingle étude et
+leurs profils suivant des variables pouvant influencer la décision de
+migrer. Dans un deuxième temps, le profilage des demandeurs
+d\textquotesingle emploi a été effectué à l\textquotesingle aide du
+modèle logistique en utilisant la variable dépendante binaire « Motif de
+migration » et les variables indépendantes suivantes : la région, le
+sexe, la situation matrimoniale, le niveau
+d\textquotesingle instruction, le milieu de résidence et la profession
+au départ du migrant. Les résultats de cette étude montrent
+qu\textquotesingle au Sénégal, la proportion jeunes migrants en quête
+d\textquotesingle emploi ces cinq dernières années est de 65,67\%. Cette
+proportion varie selon le sexe, la situation matrimoniale, la région, ou
+d\textquotesingle autres facteurs. Par ailleurs, l\textquotesingle étude
+des facteurs prédictifs de la migration pour de
+l\textquotesingle emploi, réalisée avec le modèle logistique binaire,
+donne un impact statistiquement significatif des variables suivantes :
+la région, le sexe, la situation matrimoniale, la tranche
+d\textquotesingle âge du migrant, sa profession au départ ainsi que son
+niveau d\textquotesingle éducation. Ainsi, on retient que le fait de
+n\textquotesingle avoir aucun niveau en termes
+d\textquotesingle éducation, le fait d\textquotesingle être de sexe
+masculin, le fait d\textquotesingle être dans la tranche
+d\textquotesingle âge 25-34 ou encore de résider dans la région de
+Ziguinchor et dans le milieu urbain influencent la probabilité de migrer
+à la recherche de l\textquotesingle emploi.
+
+\hypertarget{abstract}{%
+\section{ABSTRACT}\label{abstract}}
+
+Migration is a scourge that particularly affects young people in recent
+years and most often looking for work. This problem can only be solved
+by addressing these causes and identifying the characteristics of
+migrants seeking employment. Thus, the objective of this study was to
+understand the determinants of this migration for young Senegalese
+through an observation of their distribution through certain variables.
+In other words, it was a question of identifying young Senegalese who
+have a higher risk of migrating for employment. To do this, the data for
+this study were taken from the pilot phase of the 5th General Census of
+Housing and Population in Senegal (CHPS-5). To this end, the approach
+adopted consisted, in addition to the literature review and the
+presentations of the conceptual framework and the data, first of all in
+carrying out a descriptive analysis (univariate, bivariate). The
+objective sought in this part is to understand the characteristics of
+our study population and their profiles according to variables that can
+influence the decision to migrate. In a second step, the profiling of
+job seekers was carried out using the logistic model using the binary
+dependent variable ``Reason for migration'' and the following
+independent variables: region, gender, marital status, level of
+education, place of residence and occupation when the migrant leaves.
+The results of this study show that in Senegal, the proportion of young
+migrants seeking employment over the past five years is 65.67\%. This
+proportion varies by gender, marital status, region, or other factors.
+In addition, the study of predictive factors of migration for
+employment, carried out with the binary logistic model, gives a
+statistically significant impact of the following variables: region,
+sex, marital status, age group of migrants, his profession at the start
+as well as his level of education. Thus, we retain that the fact of
+having no level in terms of education, the fact of being male, the fact
+of being in the 25-34 age group or even of residing in the region of
+Ziguinchor and in the urban environment influence the probability of
+migrating in search of employment.
+
+\newpage{}
+
+\hypertarget{introduction-generale}{%
+\section{INTRODUCTION GENERALE}\label{introduction-generale}}
+
+\ul{\textbf{CONTEXTE ET JUSTIFICATION}}
+
+La migration est un phénomène universel que l'on retrouve partout et en
+tout temps avec une intensité variable. Rares sont les populations et
+les territoires qui n'ont pas été le théâtre de flux migratoires. La
+migration constitue actuellement une des problématiques majeures de
+l'économie mondiale. En effet, aujourd'hui, il n'y a jamais eu autant de
+personnes vivant dans un autre pays que celui dans lequel elles sont
+nées, selon le rapport de l'Organisation internationale pour les
+migrations (OIM), « \emph{État de la migration dans le monde 2022} ». De
+plus selon cette même source en 2020, le nombre de migrants dans le
+monde était d'environ 281 millions de personnes, soit 51 millions de
+plus qu'en 2010, 128 millions de plus qu'en 1990 et plus de trois fois
+plus qu'en 1970. Elle demeure au cœur des débats de politique économique
+et sociale tant dans les pays de départ que dans les pays d'accueil. En
+effet, la nature et l'importance des flux migratoires ont un impact
+différent mais significatif sur les économies des pays concernées. Le
+phénomène migratoire est donc très complexe et revêt divers aspects
+économiques, politiques, culturels et sociaux. Il a certes des
+conséquences économiques mais aussi des implications sociale et
+culturelles durables tant sur les pays d'accueil que sur les pays
+d'origine. Elle prend plus ces derniers temps une forme irrégulière et
+est devenue une migration de désespoir au regard des moyens utilisés.
+Même si certains d'entre eux arrivent à destination quoiqu'ayant subi
+des souffrances, nombreux sont ceux qui meurent en cours de route.
+
+De nos jours, elle touche plus les jeunes qui, face aux situations de
+leur pays décident d\textquotesingle émigrer pour diverses raisons. En
+effet, selon le Département des Affaires Economiques et Sociales (DAES)
+de l\textquotesingle ONU, le nombre estimé de jeunes migrants est passé
+de 22,1 millions en 1990 à 31,7 millions en 2020. En 2020, 11,3\% de la
+population migrante étaient des jeunes et 2,6\% des jeunes dans le monde
+étaient des migrants (DAES, 2020). L\textquotesingle Afrique
+n\textquotesingle est pas resté en marge de cette tendance migratoire et
+notamment le Sénégal. Par ailleurs, selon le rapport de
+l\textquotesingle Afro Barometer paru le 13 Novembre 2020 portant sur
+l\textquotesingle émigration des jeunes sénégalais, plus de 50 \% des
+jeunes affirment avoir pensé à émigrer dont 30\% qui y ont réfléchi
+beaucoup. Parmi les jeunes qui ont au moins « un peu » pensé à émigrer,
+la grande majorité s\textquotesingle apprête déjà (9\%) ou planifie de
+quitter le pays dans un ou deux ans mais n\textquotesingle ont pas
+commencé à se préparer dans ce sens (56\%). Cela montre comment
+l\textquotesingle émigration est devenue une option pour les jeunes
+sénégalais. De plus, selon cette même source, il a été également
+constaté que plus de la moitié des jeunes émigrant migre à la recherche
+de travail. Ces jeunes, dans le but de se rendre à ce
+qu\textquotesingle ils appellent l\textquotesingle eldorado usent de
+tous les moyens. Bien conscients des dangers qu\textquotesingle ils
+courent en le faisant, ces derniers se disent qu\textquotesingle il
+valle mieux mourir en ayant tenté que de mourir dans des conditions
+bizarres au pays. On parle de \emph{Mbëk, barça mba barsakh}
+\footnote{Cela pourrait se traduire par \textquotesingle Barcelone ou le
+  Paradis, comme si c\textquotesingle était un jihad. Le terme barzakh
+  proviendrait de l\textquotesingle arabe qui signifierait la félicité}ou
+bien encore de \emph{kaaliss kewdo walla agneere woddunde} \footnote{En
+  peul cela signifie littéralement signifie « beaucoup
+  d\textquotesingle argent ou tombeau lointain de la patrie »,
+  c\textquotesingle est-à-dire « Mieux vaut mourir loin de la misère de
+  la communauté que d\textquotesingle assister impuissant devant la
+  descente aux Enfers »}. Tous ces termes rappellent dans la conscience
+collective des africains de l\textquotesingle ouest
+l\textquotesingle épopée guerrière des diamantaires haalpularen et
+Soninke notamment, originaires de la vallée du fleuve Sénégal (Mali,
+Mauritanie, Sénégal) dans les années 1970. Ainsi, pour les jeunes
+sénégalais, émigrer et surtout clandestinement en empruntant des
+pirogues est plutôt un choix valorisant (Dr Cheik Oumar Ba et Dr Alfred
+Iniss Ndiaye, \emph{L\textquotesingle émigration clandestine
+sénégalaise}).
+
+Parallèlement, la situation des jeunes au regard de
+l\textquotesingle emploi est plus que préoccupante, plusieurs
+indicateurs le confirment : leur insertion sur le marché du travail est
+plus que tardive, la précarité de l\textquotesingle emploi et des
+revenus est bien réelle, la montée de la pauvreté des jeunes est
+choquante sans oublier la pandémie qui est venue aggraver la situation.
+En effet, selon l\textquotesingle article du Dr.~Alboury NDIAYE portant
+sur l\textquotesingle emploi des jeunes au Sénégal, 60 \% de la
+population a moins de 20 ans et les jeunes en âge de travailler
+représentent plus de la moitié de la population active. Dans les
+prochaines années, l\textquotesingle Afrique en général, sera selon
+cette même source, la zone géographique ayant la main
+d\textquotesingle œuvre la plus importante en quantité devant la Chine
+et l\textquotesingle Inde. L\textquotesingle un des grands défis à
+relever aujourd\textquotesingle hui au Sénégal c\textquotesingle est de
+permettre à chaque jeune d\textquotesingle exprimer son talent, dans un
+pays où près de 2 jeunes sur 3 est au chômage. L\textquotesingle Agence
+Nationale de la Statistique et de la Démographie sénégalaise (A.N.S.D)
+avait en 2015, estimé que chaque année, plus de 100 000 nouveaux
+demandeurs d\textquotesingle emplois entre 15 et 34 ans arrivent sur le
+marché du travail. Les chiffres récents, issus de
+l\textquotesingle article de Monsieur Papa Cheikh S. Sakho Jimbira, paru
+le 16 Janvier 2022 révèlent que chaque année, on enregistre entre
+100.000 et 260.000 jeunes sur le marché du travail. Le taux de chômage
+global, estimé à 49 \% selon l\textquotesingle Agence pour le niveau
+national, grimpe à 61 \% pour les moins de 30 ans en 2015. Ce chiffre a
+connu une baisse ces dernières années mais reste quand même important.
+Le chômage des jeunes suit une croissance exponentielle et ce depuis
+plusieurs années. A côté des jeunes qui intègrent des emplois précaires
+à la suite d\textquotesingle un échec scolaire, beaucoup de jeunes
+diplômés sont également au chômage, faute de pouvoir trouver un emploi.
+Même pour obtenir un stage, les refus sont fréquents. Ces freins sociaux
+tiennent en grande partie à l\textquotesingle inadéquation entre
+l\textquotesingle offre et la demande, au manque de compétences et
+d\textquotesingle expérience mais aussi à la problématique de
+l\textquotesingle absence de qualification professionnelle, qui pose la
+question du fossé existant entre l\textquotesingle offre de formation et
+les exigences du monde du travail, sans oublier la faiblesse du secteur
+privé.
+
+\ul{\textbf{PROBLEMATIQUE}}
+
+La question de l\textquotesingle emploi des jeunes ainsi que celle de la
+migration sont devenues des problèmes de plus en plus compliqués à gérer
+par le gouvernement sénégalais. Plusieurs solutions ont été mise en
+place pour limiter celles-ci mais force est de constater que ces
+dernières ne font qu\textquotesingle augmenter. Le Plan Senegal
+Emergent, l\textquotesingle un des piliers des politiques sénégalaises
+pour l\textquotesingle avenir développé en 2014 pour une durée de 20 ans
+vise d\textquotesingle installer l\textquotesingle économie sur une
+trajectoire de croissance forte, inclusive, durable, créatrice
+d\textquotesingle emplois. Les premiers résultats de la première phase
+de ce plan ont été plus que convaincante puisqu\textquotesingle il a
+permis entre 2014 et 2018 de créer près de 29 000 emplois
+d\textquotesingle après le Groupe de la Banque Africaine de
+Développement. A l\textquotesingle heure du bilan de la première phase,
+il a été donc noté une création d\textquotesingle emplois croissante
+mais encore insuffisante pour absorber la demande (\emph{Rapport Plan
+Senegal Emergent, Plan d\textquotesingle Action Prioritaires
+2019-2023}). Néanmoins, depuis les événements de mars 2021 qui ont
+secoué les tissus social, politique et économique du pays,
+l\textquotesingle emploi des jeunes semble constituer un mot ou une
+expression à la mode. En effet, au conseil des ministres du 10 Mars
+2021, l\textquotesingle accent a été mis sur le trytique
+jeunesse-emploi-financement. Ainsi, Le chef de l\textquotesingle Etat,
+en faisant référence à l\textquotesingle accélération de la relance de
+l\textquotesingle économie nationale, de
+l\textquotesingle intensification de l\textquotesingle exécution du
+PSE/Jeunesse, du financement et de l\textquotesingle emploi des jeunes,
+indique que le PAP2A/PSE et le budget de l\textquotesingle Etat vont
+être profondément revus au regard des nouveaux impératifs, enjeux et
+urgences signalés. Ces derniers tournent autour de la réorientation des
+priorités autour de la jeunesse. Ainsi, ce sont au moins 350 milliards
+de francs CFA qui vont être mobilisés dans la période 2021-2023 pour le
+financement des jeunes et des femmes.
+
+Face à cette situation alarmante et préoccupante de
+l\textquotesingle emploi des jeunes au pays, nombreux sont ceux qui
+préfèrent émigrer à la recherche d\textquotesingle emploi, espérant
+changer leur condition. Certains obtiennent gain de cause et
+d\textquotesingle autres quand bien même ne trouve pas un emploi
+convenable à leur formation initiale arrivent quand même à
+s\textquotesingle insérer dans le marché du travail et gagner leur vie.
+L\textquotesingle on serait tenté alors de penser que le chômage au pays
+d\textquotesingle origine est le principal déterminant de
+l\textquotesingle émigration des jeunes sénégalais en quête
+d\textquotesingle un emploi. Cependant aucune étude propre au Sénégal
+n\textquotesingle a, à notre connaissance, statué sur les principaux
+facteurs qui impulsent la migration motivée par la quête
+d\textquotesingle emploi. Dès lors, il devient alors pertinent de
+s\textquotesingle interroger sur la nature véritable des déterminants de
+l\textquotesingle émigration des jeunes sénégalais pour de
+l\textquotesingle emploi.
+
+\ul{\textbf{INTERET DU SUJET}}
+
+Cette étude sera intéressante en ce sens qu\textquotesingle elle
+permettra non seulement d\textquotesingle appréhender la question de
+l\textquotesingle émigration su Sénégal mais plus encore celle pour de
+l\textquotesingle emploi. Ainsi elle apportera une plus-value dans
+l\textquotesingle orientation des politiques pour
+l\textquotesingle emploi des jeunes en vue de limiter ce fléau. En
+effet, pour arriver à pallier le problème d\textquotesingle émigration
+des jeunes en quête d\textquotesingle emploi, il serait plus judicieux
+de créer un environnement favorable pour eux dans le pays
+d\textquotesingle origine et cela ne peut être fait sans connaitre les
+principaux facteurs qui motivent cette émigration. C\textquotesingle est
+ainsi sur cette base que pourront voir jour des politiques dans ce sens.
+
+\ul{\textbf{OBJECTIFS ET HYPOTHESES}}
+
+L\textquotesingle objectif de l\textquotesingle étude sera ainsi de
+faire ressortir les principaux déterminants de
+l\textquotesingle émigration des jeunes sénégalais pour de
+l\textquotesingle emploi. Elle repose principalement sur
+l\textquotesingle hypothèse selon laquelle les jeunes migrent à la
+recherche de meilleures conditions de vie à cause de leur situation
+professionnelle qui est principalement chômeur.
+
+\ul{\textbf{PLAN DE TRAVAIL}}
+
+Ainsi, notre étude tentera dans un premier temps de présenter le profil
+des émigrants pour de l\textquotesingle emploi. Elle se chargera par la
+suite de déterminer les facteurs explicatifs de la migration des jeunes
+sénégalais à la recherche d\textquotesingle emploi. Pour finir elle
+tentera de proposer eu égard aux principaux résultats de proposer des
+approches de politiques en vue de limiter cette émigration des jeunes
+pour de l\textquotesingle emploi.
+
+\newpage{}
+
+\hypertarget{presentation-de-la-structure-daccueil}{%
+\section{PRESENTATION DE LA STRUCTURE
+D\textquotesingle ACCUEIL}\label{presentation-de-la-structure-daccueil}}
+
+\hypertarget{pruxe9sentation-de-lansd}{%
+\subsection{Présentation de l'ANSD}\label{pruxe9sentation-de-lansd}}
+
+\hypertarget{historique-de-lansd}{%
+\subsubsection{Historique de l'ANSD}\label{historique-de-lansd}}
+
+Branche des mathématiques qui a pour objet la collecte, le traitement et
+l\textquotesingle analyse des données relatives à un ensemble
+d\textquotesingle objets, d\textquotesingle individus ou
+d\textquotesingle éléments, la Statistique constitue un outil précieux
+d\textquotesingle aide à la décision. En effet, que ce soit dans la
+prise de décision, l\textquotesingle élaboration des politiques
+publiques ou encore la suiviévaluation des projets pour
+n\textquotesingle en citer que ceux-là, l\textquotesingle on fait
+recours à la statistique qui se dote d\textquotesingle une importance
+capitale au milieu de toutes ces opérations. Au Sénégal,
+l\textquotesingle Agence Nationale de la Statistique et de la
+Démographie (ANSD) est l\textquotesingle organisme officiel en charge de
+la statistique. Créée par la loi N° 2004-21 du 21 juillet 2004, elle
+fait office d\textquotesingle une structure administrative dotée
+d\textquotesingle une personnalité juridique et d\textquotesingle une
+autonomie de gestion. L\textquotesingle ANSD succède à la Direction de
+la Prévision et de la Statistique (DPS). La loi de 2004 est venue
+scinder la DPS en deux structures à savoir la Direction de la Prévision
+et des Etudes Economiques (DPEE) et l\textquotesingle Agence Nationale
+de la Statistique et de la Démographie (ANSD).
+L\textquotesingle organisation de l\textquotesingle Agence et son mode
+de fonctionnement sont régis par le décret N° 2005-436 du 23 mai 2005.
+Elle a pour rôle d\textquotesingle assurer la coordination technique des
+activités du Système Statistique National (SSN) et de réaliser elle-même
+les activités de production et de diffusion des données statistiques
+pour les besoins du Gouvernement, des administrations publiques, du
+secteur privé, des partenaires au développement et du public.
+
+\hypertarget{missions-de-lansd}{%
+\subsubsection{Missions de l'ANSD}\label{missions-de-lansd}}
+
+L'Agence Nationale de la Statistique et de la Démographie (ANSD) est une
+structure administrative dotée de la personnalité juridique et d'une
+autonomie de gestion et placée sous l'autorité du ministre chargé de la
+Statistique. En particulier l'Agence est chargée :
+
+\begin{itemize}
+\item
+  de veiller à l\textquotesingle élaboration et à la mise en œuvre des
+  programmes pluriannuels et annuels d\textquotesingle activités
+  statistiques ;
+\item
+  d\textquotesingle assurer la mise en application des méthodes,
+  concepts, définitions, normes, classifications et nomenclatures
+  approuvés par le Comité technique des programmes statistiques ;
+\item
+  de préparer les dossiers à soumettre aux réunions du Conseil national
+  de la statistique et du Comité technique des programmes statistiques ;
+\item
+  d\textquotesingle assurer le secrétariat et
+  l\textquotesingle organisation des réunions du Conseil national de la
+  statistique et du Comité technique des programmes statistiques ainsi
+  que de ses sous-comités sectoriels ;
+\item
+  de réaliser des enquêtes d\textquotesingle inventaire à couverture
+  nationale notamment les recensements généraux de la population et les
+  recensements d\textquotesingle entreprises ;
+\item
+  de produire les comptes de la nation ;
+\item
+  de promouvoir la formation du personnel spécialisé pour le
+  fonctionnement du système national d\textquotesingle information
+  statistique par l\textquotesingle organisation des cycles de formation
+  appropriés notamment au sein d\textquotesingle une école à vocation
+  régionale ou sous régionale intégrée à l\textquotesingle agence.
+\end{itemize}
+
+En outre l\textquotesingle Agence est chargée du suivi de la coopération
+technique internationale en matière de statistique et représente à cet
+effet le Sénégal dans les réunions sous régionaux, régionales et
+internationales.
+
+\hypertarget{organisation-administrative-de-lansd}{%
+\subsubsection{Organisation administrative de
+l'ANSD}\label{organisation-administrative-de-lansd}}
+
+Placée sous la tutelle du Ministère de l\textquotesingle Économie, des
+Finances et du Plan, l\textquotesingle ANSD est administrée par un
+Conseil de Surveillance (CS) de représentants de la Primature, du
+ministère de l\textquotesingle économie, des Finances et du plan, de la
+Banque Centrale (BC), des organisations patronales, des centrales
+syndicales des travailleurs et des centres de recherche universitaires.
+Elle est également une composante du Système Statistique National (SSN)
+qui comprend également le Conseil National de la Statistique (CNS) et
+les services statistiques situés au sein des départements ministériels
+et des organismes publics et parapublics. L\textquotesingle Agence est
+dirigée par un Directeur général qui est assisté par un Directeur
+général adjoint, nommé tous deux par décret sur proposition du conseil
+d\textquotesingle orientation. Hormis la Direction générale à laquelle
+sont rattachées la Cellule de Programmation,
+d\textquotesingle Harmonisation, de Coordination Statistique et de
+Coopération Internationale (CPCCI), la Cellule de Passation des Marchés
+(CPM) et la structure d\textquotesingle audit interne,
+l\textquotesingle ANSD est composée de six directions :
+
+\begin{itemize}
+\item
+  Direction des Statistiques Économiques et de la Comptabilité Nationale
+  (DSECN) chargée de l\textquotesingle élaboration des statistiques
+  économiques et conjoncturelles, ainsi que de la production des comptes
+  nationaux annuels et trimestriels ;
+\item
+  Direction des Statistiques Démographiques et Sociales (DSDS) chargée
+  de la conception, de l\textquotesingle exécution et de
+  l\textquotesingle analyse des enquêtes, des recensements
+  démographiques, ainsi que des enquêtes socioéconomiques auprès des
+  ménages ;
+\item
+  Direction de la Méthodologie, de la Coordination Statistiques et des
+  Partenariats (DMCP) ;
+\item
+  Direction des Systèmes de l\textquotesingle Information et de la
+  Diffusion (DSID) qui a pour mission d\textquotesingle assurer la mise
+  à disposition d\textquotesingle un système
+  d\textquotesingle information efficient pour
+  l\textquotesingle ensemble des activités de l\textquotesingle ANSD et
+  de gérer la diffusion des produits de l\textquotesingle Agence ;
+\item
+  Direction de l\textquotesingle Administration Générale et des
+  Ressources Humaines (DAGRH) chargées de la gestion du personnel et des
+  compétences de l\textquotesingle Agence, d\textquotesingle assurer sa
+  sécurité sur toutes les questions juridiques et réglementaires, son
+  approvisionnement et la gestion de la logistique et du matériel, elle
+  gère les stocks de l\textquotesingle ANSD ;
+\item
+  Direction de l\textquotesingle École Nationale de Statistique et de
+  l\textquotesingle Analyse Économique (ENSAE) qui a pour mission
+  d\textquotesingle assurer la formation initiale et le perfectionnement
+  des statisticiens pour les différentes composantes du SSN : les
+  administrations publiques, les organismes publics et parapublics et le
+  secteur privé. Elle forme des Ingénieurs Statisticiens Economistes,
+  des Ingénieurs des Travaux Statistiques et des Analystes Statisticiens
+  (AS).
+\end{itemize}
+
+\hypertarget{activituxe9s-ruxe9alisuxe9es}{%
+\subsection{Activités réalisées}\label{activituxe9s-ruxe9alisuxe9es}}
+
+Ce stage a également été l\textquotesingle occasion pour nous
+d\textquotesingle appliquer les connaissances acquises à
+l\textquotesingle école, d\textquotesingle approfondir certaines et de
+se frotter aux réalités du monde professionnel. En effet, tout au long
+des deux mois (Aout à Octobre) : Nous avons participé à plusieurs
+activités entrant dans le cadre du RGPH-5 du Sénégal dont :
+
+\begin{itemize}
+\item
+  La prise de connaissance de questionnaire du RGPH-pilote et ses
+  objectifs : On s\textquotesingle est imprégner de cette phase du
+  recensement qui vise essentiellement à tester les outils de collectes
+  de données. Elle a concerné les districts de cinq régions tirés
+  suivants des techniques de collecte de données ;
+\item
+  La participation aux différentes réunions de la coordination régionale
+  de Dakar : Ces réunions ont pour but d\textquotesingle examiner les
+  activités en cours notamment la cartographie et de formuler des
+  recommandations face aux difficultés rencontrées par certains ;
+\item
+  La participation avec l\textquotesingle équipe de supervision de la
+  cartographie dans la région de Dakar : Il s\textquotesingle agit pour
+  l\textquotesingle équipe de s\textquotesingle imprégner des réalités
+  du terrain des agents cartographes et d\textquotesingle échanger avec
+  ces derniers aux problèmes rencontrés dans cette phase du recensement.
+  Il faut noter qu\textquotesingle en 2013, la phase cartographique
+  était déjà faite. Après 10 ans, il était important de mettre à jour
+  ces informations vues les grandes mutations des hommes et
+  l\textquotesingle évolution rapides des villes.
+\end{itemize}
+
+Pour notre part, on prend note et on fait une matrice de suivi qui est
+transmise aux encadreurs pour validation. Cette matrice comprend
+essentiellement trois colonnes (difficultés rencontrées, solutions et
+recommandations).Nous avons aussi mis en pratique les enseignements
+théoriques reçues à l\textquotesingle école et en parallèle faire du
+lieu de stage une seconde école où on a pu acquérir de nouvelles choses.
+Plus spécifiquement, le stage nous a permis :
+
+\begin{itemize}
+\item
+  de consolider nos acquis et acquérir de nouvelles connaissances sur
+  les logiciels STATA, Excel, R et SPSS ;
+\item
+  de connaitre une matrice de suivi ;
+\item
+  de comprendre les différentes phases du recensement ;
+\item
+  d\textquotesingle avoir quelques notions sur la migration dans sa
+  globalité ;
+\item
+  de comprendre quelques notions en modélisation économétrique ;
+\end{itemize}
+
+\newpage{}
+
+\hypertarget{cadre-conceptuel-et-revue-de-litterature}{%
+\section{CADRE CONCEPTUEL ET REVUE DE
+LITTERATURE}\label{cadre-conceptuel-et-revue-de-litterature}}
+
+\hypertarget{duxe9finitions-des-concepts}{%
+\subsection{Définitions des
+concepts}\label{duxe9finitions-des-concepts}}
+
+La migration est étudiée par les chercheurs de toutes les disciplines
+des sciences sociales, ce qui a pour conséquence de multiplier les
+approches dans sa définition et sa conceptualisation.
+L\textquotesingle approche pluridisciplinaire de la migration en fait un
+concept multidimensionnel qu\textquotesingle il est nécessaire de
+définir afin de mieux organiser notre réflexion. En plus du concept de
+migration, nous définirons des concepts qui lui sont dérivés et que nous
+utilisons dans ce travail : la migration internationale, et le migrant.
+
+\hypertarget{migration}{%
+\subsubsection{Migration}\label{migration}}
+
+Nous pouvons trouver une définition qui concilie les différentes
+conceptions de la migration dans le Glossaire de la migration de 2007 de
+l\textquotesingle Organisation Internationale pour les Migrations (OIM).
+Selon ce glossaire la migration est « \emph{le déplacement
+d\textquotesingle une personne ou d\textquotesingle un groupe de
+personnes, soit entre pays, soit dans un pays entre deux lieux situés
+sur son territoire. La notion de migration englobe tous les types de
+mouvements de population impliquant un changement du lieu de résidence
+habituelle, quelles que soient leur cause, leur composition, leur durée,
+incluant ainsi notamment les mouvements des travailleurs, des réfugiés,
+des personnes déplacées ou déracinées} ». La migration fait à la fois
+appel à la dimension temporelle et spatiale. Ces deux dimensions sont
+intrinsèquement liées. En effet, le mouvement dans
+l\textquotesingle espace qu\textquotesingle elle opère ne peut être
+qualifié de migration que s\textquotesingle il est fait sur une durée
+bien déterminée. Toute la difficulté de conceptualiser la migration
+réside non seulement dans la détermination de la distance parcourue et
+de la durée minimum, mais aussi dans l\textquotesingle intention qui
+motive ce déplacement. En effet, comment faire la différence entre un
+long séjour touristique dans un pays différent et une migration. La
+dimension temporelle fait référence à la notion de durée de la migration
+mesurée par le temps écoulé depuis le changement de résidence. Dans de
+nombreuses enquêtes démographiques, il est généralement retenu que cette
+durée est d\textquotesingle au moins six mois pour qu\textquotesingle il
+y ait migration. Cependant, d\textquotesingle autres auteurs réduisent
+cette durée à 3 mois (Ba Cheikh, 1995 ; OIM, 2007 ; Guilmoto, 1997).
+C\textquotesingle est ainsi qu\textquotesingle il est possible de
+distinguer la migration de courte durée (plus de 3 mois à moins
+d\textquotesingle un an) de celle de longue durée (au minimum un an). La
+dimension spatiale de la migration fait intervenir la notion de
+déplacement et de résidence. L'espace fait référence à un changement de
+résidence, entendu par un changement de localité (village ou ville) qui
+représente en fait la plus petite entité géographique du pays. Le
+migrant se déplace d\textquotesingle un lieu d\textquotesingle origine à
+un autre lieu et de ce fait, quitte sa résidence habituelle. La
+résidence habituelle d\textquotesingle un migrant est le lieu dans
+lequel il vit habituellement pendant une période minimum,
+conventionnellement fixée à 6 mois. Par conséquent, dépendamment de la
+durée de la migration, le migrant peut soit changer de résidence
+habituelle ou tout simplement la quitter temporairement. De plus,
+l\textquotesingle espace géographique d\textquotesingle où part le
+mouvement migratoire et dans lequel il s\textquotesingle inscrit en
+détermine le type. Il peut s\textquotesingle agir de migration
+internationale lorsque le mouvement se fait au-delà de
+l\textquotesingle espace national ou de migration interne
+lorsqu\textquotesingle il se fait au sein de cet espace. Dans le cadre
+de ce travail, nous allons plus nous intéresser à la migration
+internationale.
+
+\hypertarget{la-migration-internationale}{%
+\subsubsection{La migration
+internationale}\label{la-migration-internationale}}
+
+La Migration internationale est définie comme « \emph{le mouvement de
+personnes qui quittent leur pays d\textquotesingle origine ou de
+résidence habituelle pour s\textquotesingle établir de manière
+permanente ou temporaire dans un autre pays. Une frontière
+internationale est par conséquent franchie} » (OIM, 2007). Cette
+dernière prend le nom d\textquotesingle immigration et
+d\textquotesingle émigration selon que le pays considéré constitue le
+lieu de destination ou le lieu d\textquotesingle origine de ces
+migrations.
+
+Dans ce travail, la définition de la migration internationale que nous
+prendrons sera la définition usuelle qui veut que la migration
+internationale concerne le mouvement d\textquotesingle individus où il y
+a franchissement des frontières internationales.
+
+\hypertarget{migrant}{%
+\subsubsection{Migrant}\label{migrant}}
+
+Après avoir brossé le concept de migration, il nous faut définir le
+concept de migrant. La définition du migrant donnée par
+l\textquotesingle OIM (2007) est la suivante : « \emph{Migrant : Ce
+terme s\textquotesingle applique habituellement lorsque la décision
+d\textquotesingle émigrer est prise librement par
+l\textquotesingle individu concerné, pour des raisons de convenance
+personnelle et sans intervention d\textquotesingle un facteur
+contraignant externe. Ce terme s\textquotesingle applique donc aux
+personnes se déplaçant vers un autre pays ou une autre région aux fins
+d\textquotesingle améliorer leurs conditions matérielles et sociales,
+leurs perspectives d\textquotesingle avenir ou celles de leur famille}
+».
+
+Si ce concept décrit clairement le migrant comme un individu qui a
+effectué une migration, il n\textquotesingle explique pas comment le
+caractériser en vue d\textquotesingle analyses statistiques. Les
+enquêtes démographiques auprès des ménages définissent les migrants de
+manière concrète. Cependant ces concepts diffèrent parfois selon les
+enquêtes en fonction des objectifs recherchés. C\textquotesingle est le
+cas notamment des enquêtes que nous utilisons dans notre travail. Aussi,
+nous présenterons les concepts des migrants tels que définis dans le
+manuel du 5e Recensement de la Population et de
+l\textquotesingle Habitat (RGPH-5), que nous utiliserons dans le cadre
+de notre travail.
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Définition tel que défini dans le RGPH-5}
+\end{itemize}
+
+Dans le RGPH-5, le migrant international ou encore
+l\textquotesingle émigrant est le migrant qui a quitté son pays
+d\textquotesingle origine (le Sénégal) pour s\textquotesingle installer
+à l\textquotesingle étranger au cours des cinq années précédant le
+passage de l\textquotesingle enquêteur dans le ménage et qui y demeure
+encore. Le lieu de résidence antérieur de l\textquotesingle émigré est
+le ménage enquêté déterminant ainsi son lieu d\textquotesingle origine.
+Or, ce lieu ainsi spécifié n\textquotesingle est que le dernier point de
+départ du migrant et non pas forcément la région dans laquelle il est né
+ou dans laquelle il s\textquotesingle était établi durablement ou tout
+simplement son véritable lieu d\textquotesingle origine. De plus, les
+émigrations ne concernent que les sorties du ménage de six mois et plus.
+Le schéma suivant permet de mieux saisir la période concernée :
+
+Cette mesure ne permet d\textquotesingle obtenir des informations que
+sur la migration actuelle récente, ce qui sous-estime le nombre de
+migrants internationaux mais aussi le nombre de migrations. En effet, la
+période de référence de 5 ans exclut toutes les migrations qui ont lieu
+dans un passé plus lointain. En outre, la migration est un phénomène
+renouvelable. Mais les migrants qui ont eu à quitter leur pays dans la
+période de référence de 5 ans et qui ont eu à faire plusieurs
+allers-retours ne sont pas comptabiliser ; d\textquotesingle où une
+sous-estimation des migrations.
+
+\hypertarget{revue-de-littuxe9rature}{%
+\subsection{Revue de littérature}\label{revue-de-littuxe9rature}}
+
+\hypertarget{revue-thuxe9orique}{%
+\subsubsection{Revue théorique}\label{revue-thuxe9orique}}
+
+
+
+\end{document}
